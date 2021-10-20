@@ -1,6 +1,3 @@
-
-
-
 #' Load a fasta-formatted UniProt protein sequence database
 #'
 #' @param dbFilenames list of database file names
@@ -8,7 +5,7 @@
 #'
 #' @return List of lookup vectors of protein names (getProteinNames), protein descriptions (getProteinDescriptions) and/or data frame of sequences (dbSequences)
 #' @export
-#'
+#
 #' @examples
 #' db <- loadUniProtFASTA(dbFilenames = c("SwissProt.Hsapiens.fasta", "Uniprot.Ggallus.fasta"))
 #' getProteinNames <- db[["getProteinNames"]]
@@ -123,11 +120,11 @@ loadUniProtFASTA <- function(dbFilenames, getSequences = FALSE) {
 
   }
 
+  # Return data
   if (getSequences == TRUE) {
     return(list("getProteinNames" = getProteinNames, "getProteinDescriptions" = getProteinDescriptions, "dbSequences" = accseqdf))
   } else {
     return(list("getProteinNames" = getProteinNames, "getProteinDescriptions" = getProteinDescriptions))
   }
-
 
 }
