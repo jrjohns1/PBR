@@ -4,7 +4,7 @@
 #'
 #' @param x a data frame to which to add annotations
 #' @param keyColumnName column name in x that matches the names in the annotation vector
-#' @param annotationVector annotation lookup vector with names that correspond to keyColumnName
+#' @param annotationVector named vector with names that match to keyColumnName
 #' @param annotationName name for the new column that will be added to x containing annotations
 #' @param parseProteinGroups flag indicating if the key column is protein groups that need to be parsed to match lookup vector (default = TRUE)
 #' @param parsePTMs flag indicating if the key column contains PTM accessions that need to be parsed to match lookup vector (default = FALSE)
@@ -13,6 +13,11 @@
 #' @export
 #'
 #' @examples
+#' results <- read.delim(file = "results.txt", quote = "")
+#' db <- loadUniProtFASTA("SwissProt.fasta")
+#' getProteinNames <- db[["getProteinNames"]]
+#' results_ann <- annotateData(x = results, keyColumnName = "Protein", annotationVector = getProteinNames, annotationName = "Protein.Name")
+#'
 annotateData <- function(x, keyColumnName, annotationVector, annotationName, parseProteinGroups = TRUE, parsePTMs = FALSE) {
 
   # If the key column is protein groups then split by semicolon character, otherwise don't split

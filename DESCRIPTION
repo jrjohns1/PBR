@@ -16,4 +16,5 @@ RoxygenNote: 7.1.2
 URL: https://github.com/jrjohns1/PBR
 BugReports: https://github.com/jrjohns1/PBR/issues
 Imports: 
+    reshape2,
     stringr
