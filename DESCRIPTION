@@ -18,3 +18,5 @@ BugReports: https://github.com/jrjohns1/PBR/issues
 Imports: 
     reshape2,
     stringr
+Depends: 
+    R (>= 2.10)

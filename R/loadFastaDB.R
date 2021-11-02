@@ -17,7 +17,7 @@
 #' dbSequences <- db[["dbSequences"]]
 #' sequence <- dbSequences[which(dbSequences$Accession == "P11388), "Sequence"]
 #' sequenceLength <- dbSequences[which(dbSequences$Accession == "P11388), "Length"]
-loadUniProtFASTA <- function(dbFilenames, getSequences = FALSE) {
+loadUniProtFASTA <- function(dbFilenames, getSequences = FALSE, getSequenceLengths = FALSE) {
 
   # Get the number of databases
   numdb <- length(dbFilenames)

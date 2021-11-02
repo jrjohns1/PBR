@@ -4,7 +4,7 @@
 \alias{loadUniProtFASTA}
 \title{Load a fasta-formatted UniProt protein sequence database}
 \usage{
-loadUniProtFASTA(dbFilenames, getSequences = FALSE)
+loadUniProtFASTA(dbFilenames, getSequences = FALSE, getSequenceLengths = FALSE)
 }
 \arguments{
 \item{dbFilenames}{list of database file names}

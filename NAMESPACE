@@ -2,6 +2,7 @@
 
 export(annotateData)
 export(evidenceToMSMSCount)
+export(evidenceToSAINT)
 export(loadComparisonMatrix)
 export(loadUniProtFASTA)
 export(medianNormalizeQuant)
